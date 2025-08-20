@@ -1,0 +1,56 @@
+.navbar {
+  width: 100%;
+  background: linear-gradient(to right, #5f2c82, #49a09d); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #5f2c82, #49a09d);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeInDown 0.3s ease forwards;
+  padding: 1rem;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.links li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+  padding-right: 2rem;
+  letter-spacing: 0.5px;
+}
+
+.links li a:hover {
+  color: #d1c4e9; /* tono lavanda claro */
+}

@@ -1,0 +1,1 @@
+/*vista protegida para ver el listado de reclamos PARA LOS ADMINISTRADORES...*/
