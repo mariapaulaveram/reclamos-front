@@ -1,1 +1,0 @@
-/*Vista individual del reclamo  */

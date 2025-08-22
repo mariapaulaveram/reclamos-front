@@ -3,8 +3,8 @@
   padding: 1rem;
   margin: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content:center;
+  align-items:center;
 }
 
 .logo {
@@ -14,9 +14,10 @@
 }
 
 .logoImg {
-  width: 160px;
+  width: 70px;
   height: auto;
   object-fit: contain;
+  padding-right: 2rem;
 }
 
 .titulo{
