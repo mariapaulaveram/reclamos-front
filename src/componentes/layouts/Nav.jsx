@@ -26,6 +26,7 @@ function Navbar() {
         <li><Link to="/#home">Inicio</Link></li>
         <li><Link to="/nuevo">Nuevo Reclamo</Link></li>
         <li><Link to="/login">Ingreso</Link></li>
+        <li><Link to="/registro">Registro</Link></li>
         <li><Link to="/#funciona">Como Funciona</Link></li>
         
       </ul>

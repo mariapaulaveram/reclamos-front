@@ -7,6 +7,7 @@ import Footer from './componentes/layouts/Footer';
 import Home from './paginas/Home';
 import NuevoReclamo from './paginas/NuevoReclamo';
 import Login from './paginas/Login';
+import Registro from './paginas/Registro';
 
 function App() { 
 
@@ -18,6 +19,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="nuevo" element={<NuevoReclamo />} />
           <Route path="login" element={<Login />} />
+          <Route path="registro" element={<Registro />} />
       </Routes>
       <Footer/>
     </Router>
