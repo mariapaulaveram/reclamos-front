@@ -8,6 +8,7 @@ import Home from './paginas/Home';
 import NuevoReclamo from './paginas/NuevoReclamo';
 import Login from './paginas/Login';
 import Registro from './paginas/Registro';
+import VecinosLogueados from './paginas/VecinosLogueados';
 
 function App() { 
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="nuevo" element={<NuevoReclamo />} />
           <Route path="login" element={<Login />} />
           <Route path="registro" element={<Registro />} />
+          <Route path="logueados" element={<VecinosLogueados />} />
       </Routes>
       <Footer/>
     </Router>
