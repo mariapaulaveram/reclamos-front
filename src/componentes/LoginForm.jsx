@@ -14,13 +14,19 @@ function LoginVecinos() {
 
         try {
             const response = await axios.post('http://localhost:3000/api/vecinos', { email, password });
-
+            console.log("Respuesta completa del backend:", response.data);
             if (response.status === 200) {
-                const id_vecino = response.data.id;
-                localStorage.setItem("id_vecino", id_vecino);
-                navigate("/logueados", { state: { email } }); //armar la pagina de logueados
-            } else {
-                setErrorMessage(response.data.message || 'Credenciales incorrectas');
+                const id_vecino = response.data.vecino?.id;
+
+                if (id_vecino !== undefined) {
+                    localStorage.setItem("vecino_id", String(id_vecino));
+                    console.log("ID guardado:", id_vecino);
+                    navigate("/logueados", { state: { email } });
+                } else {
+                    console.error("ID de vecino no recibido correctamente:", id_vecino);
+                    setErrorMessage("Error al obtener el ID del vecino");
+                }
+
             }
         } catch (error) {
             console.error('Error en login:', error);

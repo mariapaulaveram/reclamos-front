@@ -1,5 +1,6 @@
 import {useLocation, useNavigate } from 'react-router-dom';
 import styles from '../../styles/VecinosLogueados.module.css';
+import ReclamosVecino from '../componentes/ReclamosVecino';
 
 function VecinosLogueados() {
     const location = useLocation();
@@ -19,7 +20,7 @@ function VecinosLogueados() {
                 </button>
             </div>
             <section id="reclamos-vecino" className={styles.presentacion}>
-                <p>Mis Reclamos</p>
+                <ReclamosVecino/>
             </section>
         </div>
     );

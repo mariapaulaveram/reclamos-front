@@ -53,18 +53,21 @@ function FormularioReclamo() {
     <form id='nuevo' className={styles.formulario} onSubmit={handleSubmit}>
       <h2>Reclamo Municipal</h2>
 
-      <label>Nombre y Apellido</label>
+      <label>Nombre</label>
       <input type="text" name="nombre" value={formData.nombre} onChange={handleChange} required />
+
+      <label>Apellido</label>
+      <input type="text" name="apellido" value={formData.apellido} onChange={handleChange} required />
 
       <label>Email</label>
       <input type="email" name="email" value={formData.email} onChange={handleChange} required />
 
-      <label>Tipo de reclamo</label>
+      <label>Tipo de Residuos</label>
       <select name="tipo" value={formData.tipo} onChange={handleChange} required>
         <option value="">Seleccionar</option>
-        <option value="iluminación">Iluminación</option>
-        <option value="bacheo">Bacheo</option>
-        <option value="residuos">Residuos</option>
+        <option value="iluminación">Organicos</option>
+        <option value="bacheo">Inorganicos</option>
+        <option value="residuos">Peligrosos</option>
       </select>
 
       <label>Descripción</label>

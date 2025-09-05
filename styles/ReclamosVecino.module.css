@@ -1,0 +1,24 @@
+.reclamosTabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.reclamosTabla th,
+.reclamosTabla td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.reclamosTabla th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+.reclamoImagen {
+  max-width: 120px;
+  height: auto;
+  border-radius: 4px;
+}
