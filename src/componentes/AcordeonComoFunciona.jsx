@@ -8,7 +8,7 @@ function AcordeonComoFunciona() {
         <Accordion.Header>Que datos necesitas tener en la mano</Accordion.Header>
         <Accordion.Body>
                   Para realizar tu reclamo de manera efectiva, necesitarás:
-                  Tus datos personales (nombre completo, DNI, teléfono)
+                  Tus datos personales (nombre, apellido, email)
                   Dirección exacta del problema
                   Descripción detallada del inconveniente
                   Fotografías que ilustren la situación (opcional pero recomendado)

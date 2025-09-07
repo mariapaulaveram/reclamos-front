@@ -8,16 +8,22 @@ function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  //const email = location.state?.email || localStorage.getItem("email") || "usuario desconocido";
 
   const [email, setEmail] = useState("usuario desconocido");
+  const [nombre, setNombre] = useState("");
+  const [apellido, setApellido] = useState("");
+
 
   useEffect(() => {
-    const storedEmail = localStorage.getItem("email");
-    if (storedEmail) {
-      setEmail(storedEmail);
-    }
-  }, [location]);
+  const storedNombre = localStorage.getItem("nombre");
+  const storedApellido = localStorage.getItem("apellido");
+  const storedEmail = localStorage.getItem("email");
+
+  if (storedNombre) setNombre(storedNombre);
+  if (storedApellido) setApellido(storedApellido);
+  if (storedEmail) setEmail(storedEmail);
+}, [location]);
+
 
 
   useEffect(() => {
@@ -42,6 +48,9 @@ function Navbar() {
     localStorage.removeItem("isLoggedIn");
     localStorage.removeItem("vecino_id");
     localStorage.removeItem("email");
+    localStorage.removeItem("nombre");
+    localStorage.removeItem("apellido");
+
     navigate("/login");
   };
 
@@ -66,7 +75,7 @@ function Navbar() {
 
       {isLoggedIn && (
         <div className={styles.saludoContainer}>
-          <span className={styles.saludo}>¡Bienvenido, {email}!</span>
+          <span className={styles.saludo}>¡Bienvenido, {nombre} {apellido}!</span>
           <button onClick={handleLogout} className={styles.logout}>
             Cerrar sesión
           </button>

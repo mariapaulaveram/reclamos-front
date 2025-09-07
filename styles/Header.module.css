@@ -1,25 +1,30 @@
-.header {
-  background-color: white;
-  padding: 1rem;
-  margin: 0;
-  display: flex;
-  justify-content:center;
-  align-items:center;
-}
 
-.logo {
+
+/* Hero Section */
+.heroBanner {
+  background-image: url('/public/images/banner/banner.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150px; /* Ajustá según tu diseño */
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 2rem;
+  color: white;
 }
 
-.logoImg {
-  width: 70px;
-  height: auto;
-  object-fit: contain;
-  padding-right: 2rem;
+.titulo {
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  z-index: 2;
 }
 
-.titulo{
-    color: #272626;
+.hero {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  background-color: #fafafa;
+  border-bottom: 1px solid #e0e0e0;
 }

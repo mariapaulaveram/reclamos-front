@@ -3,30 +3,39 @@
   background-color: #fff;
 }
 
-/* Hero Section */
-.hero {
-  padding: 3rem 1.5rem;
-  text-align: center;
-  background-color: #fafafa;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.hero h1 {
-  font-size: 2rem;
-  font-weight: 600;
-  margin: 0;
-  color: #333;
+h4{
+  background: linear-gradient(to right, #5f2c82, #49a09d);
 }
 
 /* Presentación */
 .presentacion {
-  padding: 2rem 1.5rem;
+  padding: 2rem 1.5rem 0rem 1.5rem;
   font-size: 1.1rem;
   line-height: 1.7;
   color: #444;
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
+}
+
+/*Seccion Informacion*/
+.informacion {
+  padding: 2rem 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.informacion h4 {
+  color: white;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  max-width: 930px;
+  margin: 0 auto; /* Esto lo centra horizontalmente */
+  text-align: center; /* Esto centra el texto dentro del h2 */
+  font-weight: lighter;
 }
 
 /* Sección Funciona */
@@ -38,4 +47,14 @@
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
+}
+
+.funciona h4 {
+  color: white;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  max-width: 800px;
+  margin: 0 auto; /* Esto lo centra horizontalmente */
+  text-align: center; /* Esto centra el texto dentro del h2 */
+  font-weight: lighter;
 }

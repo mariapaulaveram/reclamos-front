@@ -1,0 +1,33 @@
+.listaContenedor {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.listaHorizontal {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+
+.itemHover {
+  display: flex;
+  background-color: #e9ecef;
+  align-items: center;
+  white-space: nowrap;
+  min-width: 220px; /* Ajustá según el largo del texto */
+  padding: 0.3rem 0.7rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  font-weight: 300;
+}
+
+.itemHover:hover {
+  background-color: #5c9e97;
+  transform: scale(1.02);
+}
+
+.icono {
+  margin-right: 8px;
+  vertical-align: middle;
+}

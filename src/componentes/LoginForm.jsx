@@ -9,32 +9,38 @@ function LoginVecinos() {
     const [errorMessage, setErrorMessage] = useState('');
     const navigate = useNavigate();
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+   const handleSubmit = async (e) => {
+  e.preventDefault();
 
-        try {
-            const response = await axios.post('http://localhost:3000/api/vecinos', { email, password });
-            console.log("Respuesta completa del backend:", response.data);
-            if (response.status === 200) {
-                const id_vecino = response.data.vecino?.id;
+  try {
+    const response = await axios.post('http://localhost:3000/api/vecinos', { email, password });
+    console.log("Respuesta completa del backend:", response.data);
 
-                if (id_vecino !== undefined) {
-                    localStorage.setItem("vecino_id", String(id_vecino));
-                    localStorage.setItem("isLoggedIn", "true"); // 👈 esto indica que está logueado
-                    localStorage.setItem("email", email);
-                    console.log("ID guardado:", id_vecino);
-                    navigate("/logueados", { state: { email } });
-                } else {
-                    console.error("ID de vecino no recibido correctamente:", id_vecino);
-                    setErrorMessage("Error al obtener el ID del vecino");
-                }
+    if (response.status === 200) {
+      const vecino = response.data.vecino; // 👈 esta línea faltaba
+      const id_vecino = vecino?.id;
+      const nombre = vecino?.nombre;
+      const apellido = vecino?.apellido;
 
-            }
-        } catch (error) {
-            console.error('Error en login:', error);
-            setErrorMessage('Error al conectar con el servidor');
-        }
-    };
+      if (id_vecino !== undefined) {
+        localStorage.setItem("vecino_id", String(id_vecino));
+        localStorage.setItem("isLoggedIn", "true");
+        localStorage.setItem("email", email);
+        localStorage.setItem("nombre", nombre || "");
+        localStorage.setItem("apellido", apellido || "");
+        console.log("ID guardado:", id_vecino);
+        navigate("/logueados", { state: { email } });
+      } else {
+        console.error("ID de vecino no recibido correctamente:", id_vecino);
+        setErrorMessage("Error al obtener el ID del vecino");
+      }
+    }
+  } catch (error) {
+    console.error('Error en login:', error);
+    setErrorMessage('Error al conectar con el servidor');
+  }
+};
+
 
     return (
         <div className={styles.container}>

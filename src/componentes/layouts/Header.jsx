@@ -1,20 +1,14 @@
 import styles from '../../../styles/Header.module.css';
 
-import { Link } from 'react-router-dom';
 
 
 const Header = () => {
   return (
     <header id="hader" className={styles.header}>
-      <div className={styles.logo}>
-        <Link to="/">
-          <img
-            className={styles.logoImg}
-            src="logo.png"
-            alt="Escudo"
-          />
-        </Link>
-        <h1 className={styles.titulo}>Sistema de Reclamos Municipales</h1>
+      <div>
+        <section className={styles.heroBanner}>
+          <h1 className={styles.titulo}>Voz Ciudadana</h1>
+        </section>
       </div>
     </header>
   );

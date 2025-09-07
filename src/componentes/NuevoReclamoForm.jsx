@@ -5,9 +5,11 @@ import axios from 'axios';
 function FormularioReclamo() {
   const [formData, setFormData] = useState({
     nombre: '',
+    apellido: '',
     email: '',
     tipo: '',
-    descripcion: ''
+    descripcion: '',
+    direccion: ''
   });
 
   const [imagen, setImagen] = useState(null);
@@ -33,6 +35,7 @@ function FormularioReclamo() {
     datos.append('email', formData.email);
     datos.append('tipo', formData.tipo);
     datos.append('descripcion', formData.descripcion);
+    datos.append('direccion', formData.direccion);
     if (imagen) datos.append('imagen', imagen);
 
     try {
@@ -40,7 +43,7 @@ function FormularioReclamo() {
       
       console.log('Respuesta del backend:', response.data);
       setEstado('enviado');
-      setFormData({ nombre: '',apellido: '', email: '', tipo: '', descripcion: '' });
+      setFormData({ nombre: '',apellido: '', email: '', tipo: '', descripcion: '', direccion: '' });
       setImagen(null);
     } catch (error) {
       console.error('Error al enviar reclamo:', error);
@@ -65,13 +68,17 @@ function FormularioReclamo() {
       <label>Tipo de Residuos</label>
       <select name="tipo" value={formData.tipo} onChange={handleChange} required>
         <option value="">Seleccionar</option>
-        <option value="organicos">Organicos</option>
-        <option value="inorganicos">Inorganicos</option>
-        <option value="peligrosos">Peligrosos</option>
+        <option value="basural">Micro Basurales</option>
+        <option value="recoleccion">Recoleccion y Residuos</option>
+        <option value="ramas">Ramas y Desmalezado</option>
+        <option value="otros">Otros Residuos</option>
       </select>
 
       <label>Descripción</label>
       <textarea name="descripcion" value={formData.descripcion} onChange={handleChange} required />
+
+      <label>Dirección</label>
+      <textarea name="direccion" value={formData.direccion} onChange={handleChange} required />
 
       <label>Subir imagen (opcional)</label>
       <input type="file"  name="imagen" accept="image/*" onChange={handleImageChange} />

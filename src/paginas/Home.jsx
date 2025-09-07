@@ -1,31 +1,32 @@
 import styles from "../../styles/Home.module.css";
 import AcordeonComoFunciona from "../componentes/AcordeonComoFunciona";
 import useScrollToHash from "../hooks/useScrollToHash";
+import ListaHorizontal from "../componentes/ListaUtil";
 
 
 const Home = () => {
     useScrollToHash();
   return (
     <main id="home">
-      {/* Hero Section */}
       <div className={styles.home}>
-      <section className={styles.hero}>
-        <h1>Bienvenidos al sitio de Reclamos</h1>
-      </section>
 
       {/* Presentación */}
       <section className={styles.presentacion}>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit dapibus mollis convallis,
-           risus netus mus neque velit placerat lacinia maecenas. Varius nascetur sapien metus ut sed in fusce porttitor, 
-           rhoncus mus hac praesent libero vestibulum. Suspendisse sociis primis feugiat purus mauris ridiculus himenaeos tempus, 
-           nam vitae tortor neque egestas lobortis hac, class pulvinar curae facilisis libero rutrum aenean.
+          Desde la Dirección de Voz Ciudadana, trabajamos para canalizar tus necesidades
+    y acercarlas a las áreas correspondientes para su resolución. ¡Estamos para ayudarte! .
         </p>
       </section>
       
+      {/* Informacion */}
+      <section className={styles.informacion}>
+        <h4>Que podes reclamar?</h4>
+        <ListaHorizontal/>
+      </section>
+
       {/* Como funciona? */}
       <section id="funciona" className={styles.funciona}>
-        <h2>Como Funciona?</h2>
+        <h4>Informacion Importante para tu Reclamo</h4>
         <AcordeonComoFunciona/>
       </section>
 

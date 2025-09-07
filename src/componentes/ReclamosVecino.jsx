@@ -46,8 +46,10 @@ const ReclamosVecino = () => {
         <tr>
           <th>Tipo</th>
           <th>Descripción</th>
+          <th>Dirección</th>
           <th>Fecha</th>
           <th>Imagen</th>
+          <th>Estado</th>
         </tr>
       </thead>
       <tbody>
@@ -55,6 +57,7 @@ const ReclamosVecino = () => {
           <tr key={r.id}>
             <td>{r.tipo}</td>
             <td>{r.descripcion}</td>
+            <td>{r.direccion}</td>
             <td>{new Date(r.fecha).toLocaleDateString()}</td>
             <td>
               {r.imagen_url ? (
