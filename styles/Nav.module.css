@@ -21,6 +21,43 @@
   padding: 1rem;
 }
 
+/* Saludo y botón arriba a la derecha */
+.saludoContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  gap: 1rem;
+  font-size: 1rem;
+  color: #ffffff;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.saludo{
+  background: none;
+  padding-right: 2rem;
+}
+
+/* Botón estilo link */
+.logout {
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0;
+  display: flex;       /* mejor alineación vertical */
+  align-items: center;        /* centra el contenido del botón */
+  justify-content: center;
+  width: auto;
+  max-width: 150px;
+  white-space: nowrap;
+  margin-top: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -51,6 +88,7 @@
   letter-spacing: 0.5px;
 }
 
-.links li a:hover {
-  color: #d1c4e9; /* tono lavanda claro */
+.links li a:hover, .logout:hover {
+  color: white; /* tono lavanda claro */
 }
+

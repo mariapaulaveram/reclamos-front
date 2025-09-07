@@ -33,9 +33,6 @@ const ReclamosVecino = () => {
 
   return (
     <section className={styles.holder}>
-  <div className={styles.tituloWrapper}>
-    <h2 className={styles.tituloInstitucional}>Mis Reclamos</h2>
-  </div>
 
   {loading ? (
     <p className={styles.loading}>Cargando reclamos...</p>
@@ -44,7 +41,7 @@ const ReclamosVecino = () => {
   ) : reclamos.length === 0 ? (
     <p className={styles.sinReclamos}>No se encontraron reclamos.</p>
   ) : (
-    <table className={styles.reclamosTabla}>
+    <table className={`table table-hover ${styles.reclamosTabla}`}>
       <thead>
         <tr>
           <th>Tipo</th>

@@ -5,10 +5,11 @@ import Nav from './componentes/layouts/Nav';
 import Header from './componentes/layouts/Header';
 import Footer from './componentes/layouts/Footer';
 import Home from './paginas/Home';
-import NuevoReclamo from './paginas/NuevoReclamo';
 import Login from './paginas/Login';
 import Registro from './paginas/Registro';
 import VecinosLogueados from './paginas/VecinosLogueados';
+import ReclamosDelVecino from './paginas/ReclamosDelVecino';
+import NuevoReclamo from './paginas/NuevoReclamo';
 
 function App() { 
 
@@ -18,10 +19,11 @@ function App() {
       <Nav/>
       <Routes>
           <Route index element={<Home />} />
-          <Route path="nuevo" element={<NuevoReclamo />} />
           <Route path="login" element={<Login />} />
           <Route path="registro" element={<Registro />} />
           <Route path="logueados" element={<VecinosLogueados />} />
+          <Route path="reclamos" element={<ReclamosDelVecino />} />
+          <Route path="nuevo-reclamo" element={<NuevoReclamo />} />
       </Routes>
       <Footer/>
     </Router>

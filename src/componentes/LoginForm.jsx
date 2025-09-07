@@ -20,6 +20,8 @@ function LoginVecinos() {
 
                 if (id_vecino !== undefined) {
                     localStorage.setItem("vecino_id", String(id_vecino));
+                    localStorage.setItem("isLoggedIn", "true"); // 👈 esto indica que está logueado
+                    localStorage.setItem("email", email);
                     console.log("ID guardado:", id_vecino);
                     navigate("/logueados", { state: { email } });
                 } else {

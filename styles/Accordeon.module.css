@@ -1,0 +1,30 @@
+.primerItem {
+  border-radius: 0 !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.primerItem :global(.accordion-button) {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  margin-top: 0 !important;
+  padding-top: 0.5;
+}
+
+/* Elimina el fondo celeste y el borde azul cuando el item está abierto */
+:global(.accordion-button:not(.collapsed)) {
+  /*background-color: transparent !important;*/
+  color: inherit !important;
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+}
+
+:global(.accordion-button) {
+  /*background-color: transparent !important;*/
+  color: inherit !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+

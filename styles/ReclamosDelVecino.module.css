@@ -10,9 +10,11 @@
 
 /* Sección de presentación */
 .presentacion {
-  width: 70%;
-  max-width: 600px;
+  width: 100%;
+  max-width: 900px;
+  padding: 30px;
   background-color: #ffffff;
+  margin-top: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
@@ -34,7 +36,11 @@
   font-size: 1rem;
   color: #666666;
   line-height: 1.6;
-  max-width: 600px;
 }
 
+/* Tabla de reclamos */
+#reclamos-vecino {
+  width: 80%;
+  margin-top: 10px;
+}
 
