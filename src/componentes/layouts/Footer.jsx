@@ -36,7 +36,9 @@ const Footer = () => {
                         </li>
                     </ul>
                 </div>
-
+               <div className={styles.footerEscudo}>
+                 <img  src="../../public/logo.png" width="100" alt="Escudo municipal" />
+               </div>
             </div>
 
             <div className={styles.footerBottom}>
