@@ -51,7 +51,7 @@ function Navbar() {
     localStorage.removeItem("nombre");
     localStorage.removeItem("apellido");
 
-    navigate("/login");
+    navigate("/");
   };
 
   return (
