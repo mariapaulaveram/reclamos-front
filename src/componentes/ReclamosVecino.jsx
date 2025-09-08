@@ -49,7 +49,7 @@ const ReclamosVecino = () => {
           <th>Dirección</th>
           <th>Fecha</th>
           <th>Imagen</th>
-          <th>Estado</th>
+          <th>Estado</th> {/* ver estado abajo en map */} 
         </tr>
       </thead>
       <tbody>
@@ -70,6 +70,7 @@ const ReclamosVecino = () => {
                 "Sin imagen"
               )}
             </td>
+            <td>{r.estado}</td>
           </tr>
         ))}
       </tbody>

@@ -29,6 +29,8 @@ function FormularioReclamo() {
     setLoading(true);
     setEstado(null);
 
+    const vecino_id = parseInt(localStorage.getItem("vecino_id"), 10); // 👈 lo leés acá
+
     const datos = new FormData();
     datos.append('nombre', formData.nombre);
     datos.append('apellido', formData.apellido);
@@ -36,6 +38,7 @@ function FormularioReclamo() {
     datos.append('tipo', formData.tipo);
     datos.append('descripcion', formData.descripcion);
     datos.append('direccion', formData.direccion);
+    datos.append('vecino_id', vecino_id); // 👈 lo agregás al FormData
     if (imagen) datos.append('imagen', imagen);
 
     try {
