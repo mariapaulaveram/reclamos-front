@@ -5,7 +5,7 @@ const Registro = () => {
   return (
     <main id="registro" className={styles.registro} >
       {/* Hero Section */}
-      <div id="pilates-home" className={styles.login}>
+      <div id="registro-home" className={styles.login}>
       <section className={styles.hero}>
         <RegistroForm/>
       </section>

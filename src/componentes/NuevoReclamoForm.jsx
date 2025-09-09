@@ -58,42 +58,64 @@ function FormularioReclamo() {
 
   return (
     <form id='nuevo' className={styles.formulario} onSubmit={handleSubmit}>
-      
-      <label>Nombre</label>
-      <input type="text" name="nombre" value={formData.nombre} onChange={handleChange} required />
 
-      <label>Apellido</label>
-      <input type="text" name="apellido" value={formData.apellido} onChange={handleChange} required />
+      <div className={styles.fila}>
+        <div className={styles.campo}>
+          <label>Nombre</label>
+          <input type="text" name="nombre" value={formData.nombre} onChange={handleChange} required />
+        </div>
+        <div className={styles.campo}>
+          <label>Apellido</label>
+          <input type="text" name="apellido" value={formData.apellido} onChange={handleChange} required />
+        </div>
+      </div>
 
-      <label>Email</label>
-      <input type="email" name="email" value={formData.email} onChange={handleChange} required />
+      <div className={styles.fila}>
+        <div className={styles.campo}>
+          <label>Email</label>
+          <input type="email" name="email" value={formData.email} onChange={handleChange} required />
+        </div>
+        <div className={styles.campo}>
+          <label>Tipo de Residuos</label>
+          <select name="tipo" value={formData.tipo} onChange={handleChange} required>
+            <option value="">Seleccionar</option>
+            <option value="basural">Micro Basurales</option>
+            <option value="recoleccion">Recolección y Residuos</option>
+            <option value="ramas">Ramas y Desmalezado</option>
+            <option value="otros">Otros Residuos</option>
+          </select>
+        </div>
+      </div>
 
-      <label>Tipo de Residuos</label>
-      <select name="tipo" value={formData.tipo} onChange={handleChange} required>
-        <option value="">Seleccionar</option>
-        <option value="basural">Micro Basurales</option>
-        <option value="recoleccion">Recoleccion y Residuos</option>
-        <option value="ramas">Ramas y Desmalezado</option>
-        <option value="otros">Otros Residuos</option>
-      </select>
+      <div className={styles.fila}>
+        <div className={styles.campo}>
+          <label>Descripción</label>
+          <textarea name="descripcion" value={formData.descripcion} onChange={handleChange} required />
+        </div>
+        <div className={styles.campo}>
+          <label>Dirección</label>
+          <textarea name="direccion" value={formData.direccion} onChange={handleChange} required />
+        </div>
+      </div>
 
-      <label>Descripción</label>
-      <textarea name="descripcion" value={formData.descripcion} onChange={handleChange} required />
-
-      <label>Dirección</label>
-      <textarea name="direccion" value={formData.direccion} onChange={handleChange} required />
-
-      <label>Subir imagen (opcional)</label>
-      <input type="file"  name="imagen" accept="image/*" onChange={handleImageChange} />
-     
+      <div className={styles.fila}>
+        <div className={styles.campo}>
+          <label>Subir imagen (opcional)</label>
+          <input type="file" name="imagen" accept="image/*" onChange={handleImageChange} />
+        </div>
+        <div className={styles.campo}>
+          {/* Campo vacío para mantener la simetría */}
+        </div>
+      </div>
 
       <button type="submit" disabled={loading}>
         {loading ? 'Enviando...' : 'Enviar'}
       </button>
-      {estado === 'enviado' && <p className={styles.exito}>✅ Reclamo enviado correctamente</p>}
-{estado === 'error' && <p className={styles.error}>❌ Hubo un problema al enviar el reclamo</p>}
 
+      {estado === 'enviado' && <p className={styles.exito}>✅ Reclamo enviado correctamente</p>}
+      {estado === 'error' && <p className={styles.error}>❌ Hubo un problema al enviar el reclamo</p>}
     </form>
+
   );
 }
 

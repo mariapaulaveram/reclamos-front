@@ -17,7 +17,7 @@ function LoginVecinos() {
     console.log("Respuesta completa del backend:", response.data);
 
     if (response.status === 200) {
-      const vecino = response.data.vecino; // 👈 esta línea faltaba
+      const vecino = response.data.vecino; 
       const id_vecino = vecino?.id;
       const nombre = vecino?.nombre;
       const apellido = vecino?.apellido;
@@ -37,7 +37,7 @@ function LoginVecinos() {
     }
   } catch (error) {
     console.error('Error en login:', error);
-    setErrorMessage('Error al conectar con el servidor');
+    setErrorMessage('Usuario y/o Contraseña Incorrectos');
   }
 };
 

@@ -29,84 +29,85 @@ function RegistroVecinos() {
                 setTimeout(() => {
                     navigate('/');
                 }, 2000); // redirige después de 2 segundos
-        } else {
-          setErrorMessage(response.data.message || 'No se pudo registrar el alumno');
+            } else {
+                setErrorMessage(response.data.message || 'No se pudo registrar el alumno');
+            }
+        } catch (error) {
+            console.error('Error en registro:', error);
+            if (error.response && error.response.status === 409) {
+                setErrorMessage('Este email ya está registrado. Probá iniciar sesión.');
+            } else {
+                setErrorMessage('Error al conectar con el servidor');
+            }
         }
-      } catch (error) {
-        console.error('Error en registro:', error);
-        if (error.response && error.response.status === 409) {
-          setErrorMessage('Este email ya está registrado. Probá iniciar sesión.');
-        } else {
-          setErrorMessage('Error al conectar con el servidor');
-        }
-      }}
+    }
 
 
     return (
         <div className={styles.container}>
             <div className={styles.card}>
-                <h2 className={styles.title}>Registro de Vecinos</h2>
-                <form onSubmit={handleSubmit}>
-                    <div className={styles.formGroup}>
-                        <label htmlFor="nombre" className={styles.label}>Nombre</label>
-                        <input
-                            type="text"
-                            id="nombre"
-                            value={nombre}
-                            onChange={(e) => setNombre(e.target.value)}
-                            className={styles.input}
-                            placeholder="Tu nombre"
-                            required
-                        />
+                <h5 className={styles.title}>Registro de Vecinos</h5>
+                <form onSubmit={handleSubmit} className={styles.formulario}>
+                    <div className={styles.row}>
+                        <div className={styles.formGroup}>
+                            <label htmlFor="nombre" className={styles.label}>Nombre</label>
+                            <input
+                                type="text"
+                                id="nombre"
+                                value={nombre}
+                                onChange={(e) => setNombre(e.target.value)}
+                                className={styles.input}
+                                placeholder="Tu nombre"
+                                required
+                            />
+                        </div>
+                        <div className={styles.formGroup}>
+                            <label htmlFor="apellido" className={styles.label}>Apellido</label>
+                            <input
+                                type="text"
+                                id="apellido"
+                                value={apellido}
+                                onChange={(e) => setApellido(e.target.value)}
+                                className={styles.input}
+                                placeholder="Tu apellido"
+                                required
+                            />
+                        </div>
                     </div>
-                    <div className={styles.formGroup}>
-                        <label htmlFor="apellido" className={styles.label}>Apellido</label>
-                        <input
-                            type="text"
-                            id="apellido"
-                            value={apellido}
-                            onChange={(e) => setApellido(e.target.value)}
-                            className={styles.input}
-                            placeholder="Tu apellido"
-                            required
-                        />
+
+                    <div className={styles.row}>
+                        <div className={styles.formGroup}>
+                            <label htmlFor="email" className={styles.label}>Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                className={styles.input}
+                                placeholder="ejemplo@correo.com"
+                                required
+                            />
+                        </div>
+                        <div className={styles.formGroup}>
+                            <label htmlFor="password" className={styles.label}>Contraseña</label>
+                            <input
+                                type="password"
+                                id="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                className={styles.input}
+                                placeholder="••••••••"
+                                required
+                            />
+                        </div>
                     </div>
-                    <div className={styles.formGroup}>
-                        <label htmlFor="email" className={styles.label}>Email</label>
-                        <input
-                            type="email"
-                            id="email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            className={styles.input}
-                            placeholder="ejemplo@correo.com"
-                            required
-                        />
-                    </div>
-                    <div className={styles.formGroup}>
-                        <label htmlFor="password" className={styles.label}>Contraseña</label>
-                        <input
-                            type="password"
-                            id="password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            className={styles.input}
-                            placeholder="••••••••"
-                            required
-                        />
-                    </div>
+
                     <button type="submit" className={styles.button}>Registrarse</button>
-                    {errorMessage && (
-                        <div className={styles.errorMessage}>
-                            {errorMessage}
-                        </div>
-                    )}
-                    {successMessage && (
-                        <div className={styles.successMessage}>
-                            {successMessage}
-                        </div>
-                    )}
+
+                    {errorMessage && <div className={styles.error}>{errorMessage}</div>}
+                    {successMessage && <div className={styles.successMessage}>{successMessage}</div>}
                 </form>
+
             </div>
         </div>
     );

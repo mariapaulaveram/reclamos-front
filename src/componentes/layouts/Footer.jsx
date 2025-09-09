@@ -8,7 +8,7 @@ const Footer = () => {
                     <h5>Contacto</h5>
                     <p>
                         <i className="fas fa-map-marker-alt"></i>{' '}
-                        Calle Lorem 110, Chaco, Argentina
+                        Calle Falsa 110, Chaco, Argentina
                     </p>
                     <p>
                         <i className="fas fa-envelope"></i>{' '}
