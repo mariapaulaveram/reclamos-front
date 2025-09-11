@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import styles from '../../../styles/Nav.module.css';
 
+
+
 function Navbar() {
   const [sticky, setSticky] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
