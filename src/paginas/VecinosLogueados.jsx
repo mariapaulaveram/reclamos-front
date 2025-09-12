@@ -1,5 +1,6 @@
 import styles from '../../styles/VecinosLogueados.module.css';
 import CarouselVecinos from '../componentes/CarouselVecinos';
+import Encuesta from '../componentes/Encuesta';
 
 function VecinosLogueados() {
     return (
@@ -21,6 +22,9 @@ function VecinosLogueados() {
             <div>
                 <CarouselVecinos />
             </div>
+
+            <Encuesta />
+
         </div>
     );
 }

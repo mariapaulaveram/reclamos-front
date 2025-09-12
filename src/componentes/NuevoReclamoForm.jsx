@@ -3,6 +3,8 @@ import styles from '../../styles/NuevoReclamoForm.module.css';
 import axios from 'axios';
 
 function FormularioReclamo() {
+
+  
   const [formData, setFormData] = useState({
     nombre: '',
     apellido: '',
