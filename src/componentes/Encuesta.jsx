@@ -2,21 +2,21 @@ import { useState } from 'react';
 import axios from 'axios';
 import styles from "../../styles/Encuesta.module.css";
 
-function Encuesta({ onClose })   {
-    const [respuesta, setRespuesta] = useState('');
+function Encuesta({ onClose }) {
+    const [satisfaccion, setSatisfaccion] = useState('');
     const [comentario, setComentario] = useState('');
     const [mensajeEnviado, setMensajeEnviado] = useState(false);
 
-   
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-       const vecino_id = parseInt(localStorage.getItem("vecino_id"), 10);
+        const vecino_id = parseInt(localStorage.getItem("vecino_id"), 10);
 
         const encuestaData = {
             vecino_id,
-            respuesta,
-            comentario
+            satisfaccion,
+            comentario   
         };
 
         try {
@@ -47,16 +47,16 @@ function Encuesta({ onClose })   {
 
                     <select
                         className={styles.select}
-                        value={respuesta}
-                        onChange={(e) => setRespuesta(e.target.value)}
+                        value={satisfaccion}
+                        onChange={(e) => setSatisfaccion(e.target.value)}
                         required
                     >
                         <option value="">Selecciona una opción</option>
-                        <option value="Muy satisfecho">Muy satisfecho</option>
-                        <option value="Satisfecho">Satisfecho</option>
-                        <option value="Neutral">Neutral</option>
-                        <option value="Insatisfecho">Insatisfecho</option>
-                        <option value="Muy insatisfecho">Muy insatisfecho</option>
+                        <option value="5">5 - Muy satisfecho</option>
+                        <option value="4">4 - Satisfecho</option>
+                        <option value="3">3 - Neutral</option>
+                        <option value="2">2 - Insatisfecho</option>
+                        <option value="1">1 - Muy insatisfecho</option>
                     </select>
 
                     <textarea
