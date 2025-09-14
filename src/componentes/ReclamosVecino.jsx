@@ -49,7 +49,8 @@ const ReclamosVecino = () => {
           <th>Dirección</th>
           <th>Fecha</th>
           <th>Imagen</th>
-          <th>Estado</th> {/* ver estado abajo en map */} 
+          <th>Estado</th> 
+          <th>Comentarios</th>
         </tr>
       </thead>
       <tbody>
@@ -71,6 +72,7 @@ const ReclamosVecino = () => {
               )}
             </td>
             <td>{r.estado}</td>
+            <td>{r.comentarios}</td>
           </tr>
         ))}
       </tbody>
