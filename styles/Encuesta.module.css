@@ -1,4 +1,4 @@
-/*.overlay {
+.overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -9,9 +9,9 @@
   justify-content: center;
   align-items: center;
   z-index: 9999;
-}*/
+}
 
-/*.formContainer {
+.formContainer {
   background-color: white;
   padding: 30px;
   border-radius: 12px;
@@ -19,7 +19,7 @@
   width: 90%;
   max-width: 500px;
   position: relative;
-}*/
+}
 
 .formulario {
   max-width: 500px;
@@ -58,7 +58,7 @@
 }
 
 .boton {
-  background-color: #007bff;
+  background-color: #2ecc71;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -69,5 +69,5 @@
 }
 
 .boton:hover {
-  background-color: #0056b3;
+   background-color: #27ae60;
 }
