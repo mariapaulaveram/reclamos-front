@@ -1,6 +1,6 @@
 .navbar {
   width: 100%;
-  background: linear-gradient(to right, #5f2c82, #49a09d); 
+  background: linear-gradient(to right, #2c3e50, #007bff); 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,7 +15,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background: linear-gradient(to right, #5f2c82, #49a09d);
+  background: linear-gradient(to right, #2c3e50, #007bff);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   animation: fadeInDown 0.3s ease forwards;
   padding: 1rem;

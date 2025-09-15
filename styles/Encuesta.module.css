@@ -58,7 +58,7 @@
 }
 
 .boton {
-  background-color: #2ecc71;
+  background-color: #007bff;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -69,5 +69,5 @@
 }
 
 .boton:hover {
-   background-color: #27ae60;
+   background-color: #0056b3;
 }

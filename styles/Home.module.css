@@ -4,7 +4,8 @@
 }
 
 h4{
-  background: linear-gradient(to right, #5f2c82, #49a09d);
+  background: #2c3e50;
+  color: white !important;
 }
 
 /* Presentación */
@@ -29,7 +30,6 @@ h4{
 }
 
 .informacion h4 {
-  color: white;
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
   max-width: 930px;
@@ -50,7 +50,6 @@ h4{
 }
 
 .funciona h4 {
-  color: white;
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
   max-width: 800px;
