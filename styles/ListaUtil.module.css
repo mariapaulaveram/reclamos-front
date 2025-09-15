@@ -12,7 +12,7 @@
 
 .itemHover {
   display: flex;
-  background-color: #e9ecef;
+  background-color: #f8f8f9;
   align-items: center;
   white-space: nowrap;
   min-width: 220px; /* Ajustá según el largo del texto */
@@ -23,7 +23,7 @@
 }
 
 .itemHover:hover {
-  background-color: #a6a7a9;
+  background-color: #ebebed;
   transform: scale(1.02);
 }
 

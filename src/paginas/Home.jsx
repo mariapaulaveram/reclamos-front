@@ -17,7 +17,7 @@ const Home = () => {
     y acercarlas a las áreas correspondientes para su resolución. ¡Estamos para ayudarte! .
         </p>
       </section>
-      
+
       {/* Informacion */}
       <section className={styles.informacion}>
         <h4>Que podes reclamar?</h4>

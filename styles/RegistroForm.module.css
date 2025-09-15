@@ -43,9 +43,9 @@ button {
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #0056b3;
-}
+/*button:hover {
+  background-color: #d4d5d8;
+}*/
 
 .error {
   margin-top: 1rem;

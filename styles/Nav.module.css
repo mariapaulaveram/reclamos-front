@@ -1,24 +1,26 @@
 .navbar {
   width: 100%;
-  background: linear-gradient(to right, #2c3e50, #007bff); 
+  /*background: #2c3e50; */
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem;
+  padding: 1.2rem;
   transition: all 0.3s ease;
   position: relative;
   z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border-bottom: 3px solid #007bff;
 }
 
 .fixed {
   position: fixed;
   top: 0;
   left: 0;
-  background: linear-gradient(to right, #2c3e50, #007bff);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /*background: #2c3e50; */
+  background-color: white;
   animation: fadeInDown 0.3s ease forwards;
-  padding: 1rem;
+  padding: 1.2rem;
+  border-bottom: 3px solid #007bff;
 }
 
 /* Saludo y botón arriba a la derecha */
@@ -29,7 +31,7 @@
   padding: 0.1rem;
   gap: 1rem;
   font-size: 1rem;
-  color: #ffffff;
+  color: #272626;
   font-weight: 400;
   letter-spacing: 0.5px;
 }
@@ -43,12 +45,12 @@
 .logout {
   background: none;
   border: none;
-  color: #ffffff;
+  color: #272626;
   cursor: pointer;
   text-decoration: none;
   padding: 0;
-  display: flex;       /* mejor alineación vertical */
-  align-items: center;        /* centra el contenido del botón */
+  display: flex;      
+  align-items: center;        
   justify-content: center;
   width: auto;
   max-width: 150px;
@@ -80,7 +82,7 @@
 
 .links li a {
   text-decoration: none;
-  color: #ffffff;
+  color:#272626;
   font-weight: 600;
   transition: color 0.3s ease;
   text-transform: uppercase;
@@ -89,6 +91,6 @@
 }
 
 .links li a:hover, .logout:hover {
-  color: white; /* tono lavanda claro */
+  color: #272626;
 }
 

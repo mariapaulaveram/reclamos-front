@@ -3,11 +3,6 @@
   background-color: #fff;
 }
 
-h4{
-  background: #2c3e50;
-  color: white !important;
-}
-
 /* Presentación */
 .presentacion {
   padding: 2rem 1.5rem 0rem 1.5rem;
@@ -35,7 +30,8 @@ h4{
   max-width: 930px;
   margin: 0 auto; /* Esto lo centra horizontalmente */
   text-align: center; /* Esto centra el texto dentro del h2 */
-  font-weight: lighter;
+  background: white;
+  color: #444 !important;
 }
 
 /* Sección Funciona */
@@ -51,9 +47,10 @@ h4{
 
 .funciona h4 {
   padding-top: 0.3rem;
-  padding-bottom: 0.3rem;
+  padding-bottom: 1rem;
   max-width: 800px;
   margin: 0 auto; /* Esto lo centra horizontalmente */
   text-align: center; /* Esto centra el texto dentro del h2 */
-  font-weight: lighter;
+  background: white;
+  color: #444 !important;
 }
