@@ -18,7 +18,7 @@ function App() {
       <Header/>
       <Nav/>
       <Routes>
-          <Route index element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="login" element={<Login />} />
           <Route path="registro" element={<Registro />} />
           <Route path="logueados" element={<VecinosLogueados />} />
