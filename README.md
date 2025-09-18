@@ -1,12 +1,100 @@
-# React + Vite
+# Voz Ciudadana – Frontend
+Voz Ciudadana, una pagina React desarrollada con Vite que permite a los vecinos registrarse, iniciar sesión, cargar reclamos municipales sobre residuos, responder una encuesta y hacer seguimiento de sus reclamos.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Tecnologías utilizadas
+React
 
-Currently, two official plugins are available:
+Vite
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React Router DOM
 
-## Expanding the ESLint configuration
+Axios
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Bootstrap
+
+React Bootstrap
+
+React Icons
+
+
+## Scripts disponibles
+`npm run dev`      # Inicia el servidor de desarrollo en http://localhost:5173
+`npm run build`     # Compila la aplicación para producción
+`npm run preview`   # Previsualiza la versión de producción localmente
+
+
+##  Requisitos técnicos
+- Node.js 
+
+- npm 
+
+##  Instalación y ejecución
+
+### Clonar el repositorio
+`git clone https://github.com/mariapaulaveram/reclamos-front.git`
+
+### Ir al directorio del frontend
+`cd reclamos-front`
+
+### Instalar dependencias
+`npm install`
+
+### Ejecutar en modo desarrollo
+`npm run dev`
+
+
+
+## Conexión con el backend
+Las solicitudes HTTP se realizan con Axios. Ejemplo de uso:
+
+``` const response = await axios.post('http://localhost:3000/reclamos', datos);```
+
+- Asegurate de que el backend tenga habilitado CORS para permitir solicitudes desde http://localhost:5173.
+
+
+## Estructura del proyecto
+src/
+├── componentes/
+│   ├── layouts/
+│   │   ├── Header.jsx
+│   │   ├── Nav.jsx
+│   │   └── Footer.jsx
+│   ├── AcordeonComoFunciona.jsx
+│   ├── CarouselVecinos.jsx
+│   ├── Contacto.jsx
+│   ├── Encuesta.jsx
+│   ├── ListaUtil.jsx
+│   ├── LoginForm.jsx
+│   ├── NuevoReclamoForm.jsx
+│   ├── ReclamosVecino.jsx
+│   └── RegistroForm.jsx
+├── hooks/
+│   └── useScrollToHash.js
+├── paginas/
+│   ├── Home.jsx
+│   ├── Login.jsx
+│   ├── Registro.jsx
+│   ├── VecinosLogueados.jsx
+│   ├── ReclamosDelVecino.jsx
+│   └── NuevoReclamo.jsx
+├── App.jsx
+└── main.jsx
+
+
+## Hooks personalizados
+useScrollToHash.js: Permite hacer scroll automático a secciones específicas de la página cuando se accede con un hash en la URL. Ideal para navegación interna.
+
+## Navegación de rutas
+La aplicación utiliza React Router DOM para manejar las rutas:
+```jsx
+<Route index element={<Home />} />
+<Route path="login" element={<Login />} />
+<Route path="registro" element={<Registro />} />
+<Route path="logueados" element={<VecinosLogueados />} />
+<Route path="reclamos" element={<ReclamosDelVecino />} />
+<Route path="nuevo-reclamo" element={<NuevoReclamo />} />
+```
+
+
+
+
