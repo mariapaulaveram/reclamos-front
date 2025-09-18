@@ -53,6 +53,7 @@ Las solicitudes HTTP se realizan con Axios. Ejemplo de uso:
 
 
 ## Estructura del proyecto
+```
 src/
 ├── componentes/
 │   ├── layouts/
@@ -78,7 +79,8 @@ src/
 │   ├── ReclamosDelVecino.jsx
 │   └── NuevoReclamo.jsx
 ├── App.jsx
-└── main.jsx
+└── main.jsx 
+```
 
 
 ## Hooks personalizados
