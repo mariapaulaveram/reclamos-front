@@ -3,7 +3,6 @@ import AcordeonComoFunciona from "../componentes/AcordeonComoFunciona";
 import useScrollToHash from "../hooks/useScrollToHash";
 import ListaHorizontal from "../componentes/ListaUtil";
 
-
 const Home = () => {
     useScrollToHash();
   return (
@@ -28,11 +27,6 @@ const Home = () => {
       <section id="funciona" className={styles.funciona}>
         <h4>Informacion Importante para tu Reclamo</h4>
         <AcordeonComoFunciona/>
-      </section>
-
-      {/* Contacto */} {/* aca va un formulario de contacto que llega por mailtrap*/}
-      <section id="reclamo" className={styles.reclamoSection}>
-        
       </section>
       </div>
     </main>
