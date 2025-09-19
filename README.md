@@ -95,8 +95,27 @@ La aplicación utiliza React Router DOM para manejar las rutas:
 <Route path="logueados" element={<VecinosLogueados />} />
 <Route path="reclamos" element={<ReclamosDelVecino />} />
 <Route path="nuevo-reclamo" element={<NuevoReclamo />} />
+<Route path="recuperar" element={<RecuperarContraseña />} />
+<Route path="restablecer/:token" element={<RestablecerContraseña />} />
+
 ```
 
 
+## Recuperación de contraseña
+La aplicación permite a los vecinos recuperar su contraseña mediante un formulario accesible desde la ruta:
+```jsx
+<Route path="recuperar" element={<RecuperarContraseña />} />
+<Route path="restablecer/:token" element={<RestablecerContraseña />} />
+```
+
+- El componente RecuperarContraseña.jsx solicita el correo del vecino y envía una solicitud al backend.
+
+- Si el correo es válido, se envía un enlace de restablecimiento.
+
+- El componente RestablecerContraseña.jsx permite establecer una nueva contraseña usando el token recibido. El token recibido en el enlace se utiliza para validar la solicitud y permitir el cambio de contraseña.
+
+- El correo se envía desde vozciudadana.municipio@gmail.com.
+
+- La nueva contraseña se envía al backend y se guarda encriptada con md5.
 
 
