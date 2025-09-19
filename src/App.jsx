@@ -10,6 +10,8 @@ import Registro from './paginas/Registro';
 import VecinosLogueados from './paginas/VecinosLogueados';
 import ReclamosDelVecino from './paginas/ReclamosDelVecino';
 import NuevoReclamo from './paginas/NuevoReclamo';
+import RecuperarContraseña from './componentes/RecuperarContraseña';
+import RestablecerContraseña from './componentes/RestablecerContraseña';
 
 function App() { 
 
@@ -24,6 +26,8 @@ function App() {
           <Route path="logueados" element={<VecinosLogueados />} />
           <Route path="reclamos" element={<ReclamosDelVecino />} />
           <Route path="nuevo-reclamo" element={<NuevoReclamo />} />
+          <Route path='recuperar' element={<RecuperarContraseña/>} />
+          <Route path="/restablecer/:token" element={<RestablecerContraseña />} />
       </Routes>
       <Footer/>
     </Router>

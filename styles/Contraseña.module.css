@@ -1,4 +1,21 @@
 
+.container {
+  max-width: 400px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.tittle {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
 
 label {
   display: block;
