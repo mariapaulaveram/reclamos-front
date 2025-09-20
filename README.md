@@ -47,7 +47,9 @@ React Icons
 ## Conexión con el backend
 Las solicitudes HTTP se realizan con Axios. Ejemplo de uso:
 
-``` const response = await axios.post('http://localhost:3000/reclamos', datos);```
+```jsx
+const response = await axios.post('http://localhost:3000/reclamos', datos);
+```
 
 - Asegurate de que el backend tenga habilitado CORS para permitir solicitudes desde http://localhost:5173.
 
@@ -119,3 +121,51 @@ La aplicación permite a los vecinos recuperar su contraseña mediante un formul
 - La nueva contraseña se envía al backend y se guarda encriptada con md5.
 
 
+## Seguimiento de reclamos y notificación visual
+La aplicación permite a los vecinos hacer seguimiento del estado de sus reclamos y visualizar cualquier comentario agregado por el municipio.
+
+
+### Componentes involucrados
+
+- **ReclamosDelVecino.jsx**: página principal asociada a la ruta `/reclamos`. Presenta el título, instrucciones y contiene el componente de listado.
+- **ReclamosVecino.jsx**: componente que realiza la consulta al backend y muestra la tabla con los reclamos del vecino logueado.
+
+
+### Flujo de actualización
+Cuando el municipal modifica un reclamo desde el panel de administración, el backend:
+
+Actualiza el estado y/o comentario.
+
+Envía un correo al vecino notificando el cambio.
+
+Guarda una alerta en sesión para que el municipal vea la confirmación en pantalla.
+
+### Visualización en el frontend
+El vecino accede a la ruta /reclamos, que renderiza ReclamosDelVecino.jsx.
+
+Este incluye el componente ReclamosVecino, que realiza una solicitud GET al backend:
+
+```js
+    axios.get('http://localhost:3000/api/vecinos/reclamos', {params: { vecino_id }});
+```
+
+El vecino_id se obtiene desde localStorage, guardado previamente en el login.
+
+La respuesta incluye todos los reclamos del vecino, con los campos actualizados.
+
+Se renderiza una tabla con:
+
+- Tipo de residuos  
+- Descripción  
+- Dirección  
+- Fecha del reclamo  
+- Imagen (si fue cargada)  
+- Estado actual  
+- Comentario del municipio
+
+
+Si no se encuentra el vecino_id, se muestra un mensaje de error.
+
+Si no hay reclamos, se informa al usuario.
+
+Si hay reclamos, se muestran en una tabla con estilos personalizados
